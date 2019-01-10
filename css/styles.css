@@ -1,0 +1,414 @@
+/* VARIABLE SETUP ---------------------------------- */
+
+:root {
+  --main-bg-color: #1A1A1A;
+  --dk-border-color: #2f2f2f;
+  --deep-gray: #1A1A1A;
+  --accent-gray: #262626;
+  --main-font-color: #fff;
+  --color-purple-accent: #7d46ca;
+}
+
+
+
+/* DEFAULT STYLES ---------------------------------- */
+
+* {margin:0; padding: 0;}
+
+
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+}
+
+.headline {    
+    font-family: 'Merriweather', Helvetica, Arial, serif;
+}
+
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section {
+    position: relative;
+}
+
+/* FONT STYLES ---------------------------------- */
+
+h1 {
+    font-size: 2em;
+    margin: 1em 0 0.2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 1em 0 0.2em;
+}
+
+h3 {
+    font-size: 1.1em;
+    margin: 1em 0 0.2em;
+}
+
+p {
+    font-size: 1em;
+    margin: 0.1em 0;
+}
+
+.lighter {
+    font-weight: 100;
+}
+
+.itl {
+    font-style: italic;
+}
+
+.wide {
+    letter-spacing: 0.05em;
+}
+
+
+.divider {
+    width: 100%;
+    border-bottom: 1px solid var(--dk-border-color);
+    margin: 1em 0;
+}
+
+.divider.white {
+    border-bottom: 1px solid #fff;
+}
+
+
+/* SECTION 1 ---------------------------------- */
+/* currently the header */
+
+#section1 {
+    padding-top: 2em;
+    text-align: center;
+}
+
+
+
+.nav_wrapper {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.nav_wrapper p {
+    cursor: pointer;
+    margin: 0 0.8em;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease-out;
+}
+
+
+.nav_wrapper p:hover {
+    color: var(--color-purple-accent);
+    border-bottom: 1px solid var(--color-purple-accent);
+}
+
+/* SECTION 2 ---------------------------------- */
+/* currently the hero/banner area */
+
+#section2 {
+    background-color: var(--accent-gray);
+    text-align: center;
+    padding: 6em 0;
+}
+
+#section2 h1 {
+    font-size: 4em;
+    margin-top: 0;
+}
+
+#section2 h1 + h2 {
+    margin-top: -0.5em;
+    font-size: 2em;
+}
+
+
+
+/* SECTION 3 ---------------------------------- */
+/* some images and about text */
+
+#section3 .wrapper {
+    text-align: center;
+    padding: 3em 0;
+    
+}
+
+#section3 .image_bar_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+#section3 .image_bar_wrapper .image {
+    width: 370px;
+    height: 280px;
+    background-position: 50% 50%;
+    background-size: 125%;
+    background-repeaT: no-repeat;
+    transition: all 0.3s ease-out;
+}
+
+#section3 .image_bar_wrapper .image:hover {
+    background-size: 150%;
+}
+
+#section3 .image_bar_wrapper .image:nth-of-type(1) {
+    background-image: url(../images/detail-couple.jpg);
+}
+#section3 .image_bar_wrapper .image:nth-of-type(2) {
+    background-image: url(../images/detail-oldman.jpg);
+}
+#section3 .image_bar_wrapper .image:nth-of-type(3) {
+    background-image: url(../images/detail-parent.jpg);
+}
+
+
+#about {
+    text-align: left;
+}
+
+#about h3 {
+    color: var(--color-purple-accent);
+    text-transform: uppercase;
+    margin: 1.5em 0 0.2em;
+    font-size: 1.7em;
+}
+
+
+/* SECTION 4 ---------------------------------- */
+/* plans */
+
+#section4 {
+    background-color: var(--color-purple-accent);
+    padding: 3em 0;
+    /*color: var(--deep-gray);*/
+    text-align: center;
+}
+
+
+#plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#plans .plan_box {
+    width: 450px;
+    height: 450px;
+    background-color: var(--accent-gray);
+    color: #fff;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boxer_icon {
+    background-image: url(../images/boxer.png);
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.plan_box .boxer_stack {
+    display: flex;
+}
+
+.plan_box .boxer_stack .boxer_icon:not(:first-of-type) {
+    margin-left: -20px;
+}
+
+.plan_box h2 {
+    font-size: 1.25em;
+    letter-spacing: 0.04em;
+    margin: 0.2em 0 0.5em;
+}
+
+.plan_box.annual .boxer_icon {
+    width: 105px;
+    height: 105px;
+}
+
+.plan_box .cost {
+    font-size: 4em;
+    display: inline-flex;
+    /*line-height: 0.7em;*/
+    margin: 0;
+}
+.plan_box .cost .dollar {
+    font-size: 0.7em;
+    margin-right: 0.05em;
+}
+.plan_box .cost .cents {
+    font-size: 0.4em;
+    margin-top: 0.5em;
+    margin-left: 0.1em;
+}
+
+
+/* SECTION 5 ---------------------------------- */
+/* faq and filler */
+
+#section5 {
+    padding: 3em 0;
+}
+
+#customers {
+    text-align: center;
+}
+
+#customers h2 {
+    margin: 1em 0;
+}
+
+
+
+/* SECTION 6 ---------------------------------- */
+/* footer */
+#section6 {
+    background-color: var(--accent-gray);
+    text-align: center;
+    padding: 6em 0;
+}
+
+#section6 .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section6 .box {
+    text-align: left;
+}
+
+#section6 .box:first-of-type {
+    width: 20%;
+    margin-right: 3em;
+}
+
+
+/* MEDIA QUERIES ---------------------------------- */
+
+/* Thinner than wrapper */
+@media only screen and (max-width: 1300px) {
+    .wrapper {
+        width: 95%;
+        box-sizing: border-box;
+    }
+    
+    #section3 .image_bar_wrapper .image {
+        width: 30%;
+        height: auto;
+        padding-bottom: 25%;
+    }
+    
+}
+
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+    #section6 {
+        padding: 3em 0;
+    }
+    #section6 .box:first-of-type {
+        width: 25%;
+        margin-right: 2em;
+    }
+}
+
+/* Phone */
+@media only screen and (max-width: 700px) {
+    
+    #section3 .image_bar_wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #section3 .image_bar_wrapper .image {
+        width: 80vw;
+        padding-bottom: 56%;
+        margin-bottom: 1em;
+    }
+    
+    #photo_wall img {
+        width: 30vw;
+        height: 30vw;
+    }
+    
+    #section6 .wrapper {
+        flex-wrap: wrap;
+    }
+    
+    #section6 .box:first-of-type {
+        width: auto;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+   
+}
+
+/* Tiny Phone */
+@media only screen and (max-width: 500px) {
+    
+    #about {
+        padding: 0 0.5em;
+    }
+    
+    #section2 h1 {
+        font-size: 3.5em;
+    }
+    #section2 h1 + h2 {
+        font-size: 1.5em;
+    }
+    
+    #plans .plan_box {
+        width: 100%;
+        height: auto;
+        padding: 1em;
+    }
+    
+    .plan_box h1 {
+        margin-top: 0.4em;
+    }
+    
+    #photo_wall img {
+        width: 25vw;
+        height: 25vw;
+    }
+    
+   
+    
+    
+}
+
+/* SECTION 10 ---------------------------------- */
+/* playground space*/
+
+
+#section10 {
+    min-height: 1000px;
+    background-image: url(../images/hero.jpg);
+    display: none;
+}
+
+#section10 .overlay {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(45deg,rgba(0,0,0,.09) 2px,transparent 2px,transparent 4px,rgba(0,0,0,.09) 4px,rgba(0,0,0,.09) 6px,transparent 6px,transparent);
+    background-size:6px 6px;
+}
